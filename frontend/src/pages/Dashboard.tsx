@@ -141,9 +141,9 @@ export default function Dashboard() {
         <section className="rounded-xl border border-slate-800 bg-slate-900/60 p-5">
           <div className="flex items-center justify-between mb-4">
             <h2 className="font-semibold">Sample history</h2>
-            <a href={api.exportCsvUrl()} className="text-sm rounded-lg border border-slate-700 hover:border-slate-500 transition px-3 py-1.5">
+            <button onClick={() => api.exportEvents()} className="text-sm rounded-lg border border-slate-700 hover:border-slate-500 transition px-3 py-1.5">
               Export CSV
-            </a>
+            </button>
           </div>
           {samples.length === 0 ? (
             <p className="text-sm text-slate-500">No samples recorded yet.</p>

@@ -101,8 +101,12 @@ timestamp, never an image or identity.
 
 ## Security considerations
 
-Upload size validated, CORS restricted, no secrets in source. No admin authentication in
-this MVP — add it before exposing the dashboard outside a trusted network.
+- **API key required on every endpoint except `/api/health`.** Set `API_KEY` (backend
+  `.env`) and `VITE_API_KEY` (frontend `.env`) to the same value before deploying anywhere
+  reachable outside your own machine — the default (`dev-local-key-change-me`) is for
+  local development only. Single-tenant "licensed instance" model, not per-user accounts.
+- Rate limiting (10 req/60s/IP) on `/api/analyze*`.
+- Upload size validated server-side, CORS restricted, no secrets in source.
 
 ## Privacy considerations
 

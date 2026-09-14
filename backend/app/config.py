@@ -10,6 +10,7 @@ class Settings(BaseSettings):
     max_upload_mb: int = 100
     service_rate_per_minute: float = 4.0  # people served per minute, for wait-time estimate
     crowd_alert_threshold: int = 8
+    api_key: str = "dev-local-key-change-me"
 
     class Config:
         env_file = ".env"
