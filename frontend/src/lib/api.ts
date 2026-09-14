@@ -1,5 +1,5 @@
-const API_BASE = "";
-const API_KEY = (import.meta.env.VITE_API_KEY as string) || "dev-local-key-change-me";
+const API_BASE = (import.meta.env.VITE_API_BASE as string) || "https://queuesense-607032555709.us-central1.run.app";
+const API_KEY = (import.meta.env.VITE_API_KEY as string) || "500ede510bb840f3fcff360d5c88970770aeec747d1a9f1b";
 
 export interface QueueSample {
   id: number;
